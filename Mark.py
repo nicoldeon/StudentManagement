@@ -18,7 +18,7 @@ class Mark(CalculationMark):
         try:
             math = float(math)
             if (Mark.check_mark(math)):
-                self.physics_mark = math
+                self.math_mark = math
         except:
             raise ValueError("Math mark data type doesn't valid!")
 
@@ -42,7 +42,7 @@ class Mark(CalculationMark):
         try:
             chemistry = float(chemistry)
             if (Mark.check_mark(chemistry)):
-                self.c = chemistry
+                self.chemistry_mark = chemistry
         except:
             raise ValueError("Chemistry mark data type doesn't valid!")
 

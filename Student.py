@@ -1,9 +1,7 @@
 from Human import Human
 from Mark import Mark
-from tabulate import tabulate
 import csv
 import os.path
-import sys
 
 
 class Student(Human):
@@ -41,10 +39,10 @@ class Student(Human):
         self.average_mark = val
 
     def get_performance(self):
-        return self.capacity
+        return self.performance
 
     def set_performance(self, val):
-        self.capacity = val
+        self.performance = val
 
     def get_average_mark(self):
         ave_mark = self.get_mark().calc_ave_mark()
@@ -72,7 +70,6 @@ class Student(Human):
     @classmethod
     def read_from_file(cls, url_path='Student.csv', *agrs, **kwargs):
         """ Method to read list student from file csv """
-        Student.ls_student = []
         if agrs:
             url_path = agrs[0]
         if os.path.exists(url_path):
@@ -97,5 +94,8 @@ class Student(Human):
         else:
             return -1
 
+    def __str__(self):
+        return f"Student({self.get_student_id()}, {self.get_name()}, {self.get_gender()}, {self.get_age()}, {self.get_mark().get_math_mark()}, {self.get_mark().get_physics_mark()}, {self.get_mark().get_chemistry_mark()}, {self.get_average_mark()}, {self.calc_performance()})"
+
     def __repr__(self):
-        return f"Student({self.student_id}, {self.name}, {self.gender}, {self.age}, {self.get_mark().get_math_mark()}, {self.get_mark().get_physics_mark()}, {self.get_mark().get_chemistry_mark()}, {self.get_average_mark()}, {self.calc_performance()})"
+        return f"Student({self.get_student_id()}, {self.get_name()}, {self.get_gender()}, {self.get_age()}, {self.get_mark().get_math_mark()}, {self.get_mark().get_physics_mark()}, {self.get_mark().get_chemistry_mark()}, {self.get_average_mark()}, {self.calc_performance()})"

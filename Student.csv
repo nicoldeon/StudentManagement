@@ -1,6 +1,5 @@
-name,gender,age,math_mark,physics_mark,chemistry_mark
-Nina,Female,28,9.0,9.7,9.3
-Henry,Male,26,7.0,8.0,9.0
-Hanni,Female,18,9.0,9.0,9.0
-Nanni,Female,18,3.0,2.0,1.0
-Laura,Male,19,9.3,8.9,4.0
+student_id,name,gender,age,math_mark,physics_mark,chemistry_mark
+1,Nina,Female,28,9.0,9.7,9.3
+2,Henry,Male,26,7.0,8.0,9.0
+3,Hanni,Female,18,9.0,9.0,9.0
+4,Nanna,Female,27,8.9,7.8,9.0
