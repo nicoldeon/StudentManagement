@@ -7,10 +7,9 @@ import sys
 
 
 class StudentManagement:
-    ls_students = []
 
-    def __init__(self, ls_students):
-        self.ls_students = Student.ls_student
+    def __init__(self, ls_students=None):
+        self.ls_students = ls_students
 
     def sort_student_by_gpa(self):
         """ Method to sort student asc by student's gpa"""
