@@ -48,7 +48,7 @@ class Mark(CalculationMark):
 
     @staticmethod
     def check_mark(mark):
-        if 0 <= mark <= 10 and isinstance(mark, float):
+        if 0 <= mark <= 10:
             return True
         return False
 
