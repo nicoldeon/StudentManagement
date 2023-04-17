@@ -1,4 +1,3 @@
-from Human import Human
 from Mark import Mark
 from Student import Student
 import csv

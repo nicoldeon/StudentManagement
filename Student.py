@@ -1,10 +1,10 @@
-from Human import Human
+from Person import Person
 from Mark import Mark
 import csv
 import os.path
 
 
-class Student(Human):
+class Student(Person):
     ls_student = []
 
     def __init__(self,
