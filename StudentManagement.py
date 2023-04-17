@@ -60,7 +60,7 @@ class StudentManagement:
                              'physics_mark', 'chemistry_mark'])
             for student in self.ls_students:
                 writer.writerow([
-                    student.get_student_id(),
+                    '',
                     student.get_name(),
                     student.get_gender(),
                     student.get_age(),
